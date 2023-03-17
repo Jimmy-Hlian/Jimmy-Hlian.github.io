@@ -1,32 +1,177 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>我的音乐盒 | 亦然亦程的博客</title><meta name="author" content="亦然亦程"><meta name="copyright" content="亦然亦程"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="作词 : Robin Gan作曲 : Robin GanI open TikTok everybody showing off their queen,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的音乐盒">
+<meta property="og:url" content="https://jimmy-hlian.github.io/2022/12/30/%E6%88%91%E7%9A%84%E9%9F%B3%E4%B9%90%E7%9B%92/index.html">
+<meta property="og:site_name" content="亦然亦程的博客">
+<meta property="og:description" content="作词 : Robin Gan作曲 : Robin GanI open TikTok everybody showing off their queen,">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jimmy-hlian.github.io/img/favicon.png">
+<meta property="article:published_time" content="2022-12-30T09:00:00.000Z">
+<meta property="article:modified_time" content="2022-12-30T14:57:04.045Z">
+<meta property="article:author" content="亦然亦程">
+<meta property="article:tag" content="分享">
+<meta property="article:tag" content="音乐">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jimmy-hlian.github.io/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jimmy-hlian.github.io/2022/12/30/%E6%88%91%E7%9A%84%E9%9F%B3%E4%B9%90%E7%9B%92/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '我的音乐盒',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-12-30 22:57:04'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-    if theme.reward.enable && theme.reward.QR_code
-      !=partial('includes/post/reward', {}, {cache: true})
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/favicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/bg.png')"><nav id="nav"><span id="blog-info"><a href="/" title="亦然亦程的博客"><span class="site-name">亦然亦程的博客</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">我的音乐盒</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-30T09:00:00.000Z" title="发表于 2022-12-30 17:00:00">2022-12-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-30T14:57:04.045Z" title="更新于 2022-12-30 22:57:04">2022-12-30</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="我的音乐盒"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1916213807&auto=1&height=66"></iframe>
+<dr>
 
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
+<hr>
+<p>作词 : Robin Gan<dr><br>作曲 : Robin Gan<dr><br>I open TikTok everybody showing off their queen,<dr><span id="more"></span><br>我打开TikTok，每个人都在秀恩爱<dr><br>I, wake up in the morning broke and I got nothing.<dr><br>我一觉睡醒除了穷什么都没有<dr><br>She asks me why I asked for nudes<dr><br>她问我为啥问她要清凉照<dr><br>I’m like “what do you mean”<dr><br>我想说“你啥意思”<dr><br>I gonna chasing my dream<dr><br>我会追求我的梦想<dr><br>so I won’t even take a glance<dr><br>所以我看都不会看一眼<dr><br>I would rather do my math<dr><br>我宁愿做我的数学<dr><br>High on some calculus<dr><br>微积分做到嗨<dr><br>I can forget about my past<dr><br>过去的就过去吧<dr><br>Robin Gan Robin Gan<dr><br>I don’t study for the test<dr><br>我并非单纯为考试而学习<dr><br>Got a 100 on that test<dr><br>就为了拿个100分<dr><br>Anyway<dr><br>不管咋说<dr><br>I still out here everyday<dr><br>我每天还是在学习的路上<dr><br>Girl, it’s been 3AM<dr><br>女孩，凌晨3点了<dr><br>We study till 3AM<dr><br>学到凌晨3点就够了<dr><br>She say “can you do my math?”<dr><br>她说“你能帮我做数学吗”<dr><br>I say “yes I can”<dr><br>我说“当然可以”<dr><br>She start taking off her clothes<dr><br>她开始脱掉衣服<dr><br>She want my body<dr><br>她想要图谋不轨<dr><br>But I say “I don’t want your bra”<dr><br>但我说“我不想要这样”<dr><br>I want a study night<dr><br>我只想要一个学习之夜<dr><br>But who knew,<dr><br>可是谁知道呢<dr><br>I don’t wanna a thing that with you<dr><br>我是真的不想和你发生什么<dr><br>But who knew,<dr><br>可是谁知道呢<dr><br>I don’t like the math that we do<dr><br>我不喜欢你所谓的数学<dr><br>I rather stress out on computer science right now<dr><br>我宁愿现在专心学计算机<dr><br>Coding my coding my robot<dr><br>调试我的机器人<dr><br>I’m getting too high right now<dr><br>我现在可太嗨啦<dr><br>I open TikTok everybody showing off their queen,<dr><br>我打开TikTok，每个人都在秀恩爱<dr><br>I, wake up in the morning broke and I got nothing<dr><br>我一觉睡醒除了穷什么都没有<dr><br>She asks me why I asked for nudes<dr><br>她问我为什么要清凉照<dr><br>I’m like “what do you mean”<dr><br>我想说“你说啥”<dr><br>I gonna chasing my dream<dr><br>我会追求我的梦想<dr><br>So I won’t even take a glance<dr><br>所以我看都不会看一眼<dr><br>I would rather do my math,<dr><br>我宁愿做我的数学<dr><br>High on some calculus<dr><br>微积分做到嗨<dr><br>I can forget about my past<dr><br>过去的就过去吧<dr><br>Robin Gan Robin Gan<dr><br>I don’t study for the test<dr><br>我并非单纯为考试而学习<dr><br>Got a 100 on that test<dr><br>就为了拿个100分<dr><br>Anyway<dr><br>不管咋说<dr><br>I still out here everyday<dr><br>我每天还是在学习的路上<dr><br>Oh, maybe , you should really leave me,<dr><br>噢，我想，你确实应该离开我<dr><br>Got too many homework , baby<dr><br>太多作业做不完啦，宝贝<dr><br>I still try to finish<dr><br>我还在试图解决它们<dr><br>Running away from you<dr><br>从你身边离开<dr><br>(who) I can’t really take care<dr><br>我真的没法专心了<dr><br>I am on my way to complete all of my wishes!<dr><br>我还在完成我人生理想的路上<dr><br>So I do this<dr><br>所以这就是我在做的<dr><br>Taking couple math<dr><br>继续做数学<dr><br>you know I gonna keep it focus<dr><br>你知道我会继续专注于学习<dr><br>I’ve been making hits<dr><br>我仍然在持续突破<dr><br>I still got A on my courses<dr><br>我仍然在课上拿到A<dr><br>They said I should drop out<dr><br>他们说我应该放下一会儿<dr><br>But they don’t know what my life is<dr><br>但他们根本不理解我的追求<dr><br>I’ll be on my way to the one of the greatest<dr><br>我一直在成为万里挑一的路上<dr><br>I’ve been doing everything that my parents say<dr><br>我一直做着我父母让我做的事<dr><br>Sometime I felt like my family control of me<dr><br>有些时候我感觉我的家庭控制着我<dr><br>I just wanna be myself one more time<dr><br>但这次我只想做我自己<dr><br>I just wanna be myself one more time!<dr><br>我只想做一回自己！<dr><br>I open TikTok everybody showing off their queen,<dr><br>我打开TikTok，每个人都在秀恩爱<dr><br>I, wake up in the morning broke and I got nothing.<dr><br>我一觉睡醒除了穷什么都没有<dr><br>She asks me why I asked for nudes<dr><br>她问我睡醒为啥一丝不挂<dr><br>I’m like “what do you mean”<dr><br>我想说“关你啥事”<dr><br>So I won’t even take a glance<dr><br>所以我连看都不会看一眼<dr><br>I would rather do my math<dr><br>我宁愿做我的数学<dr><br>High on some calculus<dr><br>微积分做到嗨<dr><br>I can forget about my past<dr><br>过去的就过去吧<dr><br>Robin Gan Robin Gan<dr><br>I don’t study for the test<dr><br>我可不是为了考试而学习的那种人<dr><br>Got a 100 on that test<dr><br>只为了考试拿个100分<dr><br>Anyway<dr><br>不管咋说<dr><br>I still out here everyday<dr><br>我每天还是在学习的路上<dr><br>Won’t take a glance, yeah<dr><br>其他的事看都不看一眼<dr><br>I do my math, yeah<dr><br>我只想做我的数学，耶<dr><br>We do the math, yeah<dr><br>让我们做数学吧，耶<dr><br>I do the math,yeah<dr><br>让我们做数学吧，耶<dr><br>We do the math,yeah<dr></p>
+<hr>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1368754688&auto=1&height=66"></iframe>
+<dr>
 
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
-
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+<hr>
+<p>作词 : 潘云安<dr><br>作曲 : 潘云安<dr><br>我肯定在几百年前就说过爱你<dr><br>只是你忘了 我也没记起<dr><br>我肯定在几百年前就说过爱你<dr><br>只是你忘了 我也没记起<dr><br>走过 路过 没遇过<dr><br>回头 转头 还是错<dr><br>你我不曾感受过 相撞在街口<dr><br>相撞在街口<dr><br>你妈没有告诉你<dr><br>撞到人要说对不起<dr><br>本来今天好好的<dr><br>爱人就错过<dr><br>爱人就错过<dr><br>我肯定在几百年前就说过爱你<dr><br>只是你忘了 我也没记起<dr><br>我肯定在几百年前就说过爱你<dr><br>只是你忘了 我也没记起<dr><br>走过 路过 没遇过<dr><br>回头 转头 还是错<dr><br>你我不曾感受过 相撞在街口<dr><br>相撞在街口<dr><br>你妈没有告诉你<dr><br>撞到人要说对不起<dr><br>本来今天好好的<dr><br>爱人就错过<dr><br>爱人就错过<dr><br>走过 路过 没遇过<dr><br>回头 转头 还是错<dr><br>你我不曾感受过 相撞在街口<dr><br>相撞在街口<dr><br>你妈没有告诉你<dr><br>撞到人要说对不起<dr><br>本来今天好好的<dr><br>爱人就错过<dr><br>爱人就错过<dr><br>走过 路过 没遇过<dr><br>回头 转头 还是错<dr><br>你我不曾感受过 相撞在街口<dr><br>相撞在街口<dr><br>你妈没有告诉你<dr><br>撞到人要说对不起<dr><br>本来今天好好的<dr><br>爱人就错过<dr><br>爱人就错过<dr><br>走过 路过 没遇过<dr><br>回头 转头 还是错<dr><br>你我不曾感受过 相撞在街口<dr><br>相撞在街口<dr><br>你妈没有告诉你<dr><br>撞到人要说对不起<dr><br>本来今天好好的<dr><br>爱人就错过<dr><br>爱人就错过<dr><br><dr></p>
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://jimmy-hlian.github.io">亦然亦程</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jimmy-hlian.github.io/2022/12/30/%E6%88%91%E7%9A%84%E9%9F%B3%E4%B9%90%E7%9B%92/">https://jimmy-hlian.github.io/2022/12/30/%E6%88%91%E7%9A%84%E9%9F%B3%E4%B9%90%E7%9B%92/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jimmy-hlian.github.io" target="_blank">亦然亦程的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%86%E4%BA%AB/">分享</a><a class="post-meta__tags" href="/tags/%E9%9F%B3%E4%B9%90/">音乐</a></div><div class="post_share"><div class="social-share" data-image="/img/favicon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/12/30/%E5%AD%A6%E4%B9%A0App%E5%88%86%E4%BA%AB/" title="学习资源分享-学习App分享"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">学习资源分享-学习App分享</div></div></a></div><div class="next-post pull-right"><a href="/2022/12/29/B%E7%AB%99up%E4%B8%BB%E6%8E%A8%E8%8D%90/" title="学习资源分享-B站up主推荐"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">学习资源分享-B站up主推荐</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/12/29/B%E7%AB%99up%E4%B8%BB%E6%8E%A8%E8%8D%90/" title="学习资源分享-B站up主推荐"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-29</div><div class="title">学习资源分享-B站up主推荐</div></div></a></div><div><a href="/2022/12/30/%E5%AD%A6%E4%B9%A0App%E5%88%86%E4%BA%AB/" title="学习资源分享-学习App分享"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-30</div><div class="title">学习资源分享-学习App分享</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">亦然亦程</div><div class="author-info__description">亦然亦程的博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Jimmy-Hlian/" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/04/C++%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="C++基础教程">C++基础教程</a><time datetime="2023-03-04T01:00:00.000Z" title="发表于 2023-03-04 09:00:00">2023-03-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/12/30/%E5%AD%A6%E4%B9%A0App%E5%88%86%E4%BA%AB/" title="学习资源分享-学习App分享">学习资源分享-学习App分享</a><time datetime="2022-12-30T15:00:00.000Z" title="发表于 2022-12-30 23:00:00">2022-12-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/12/30/%E6%88%91%E7%9A%84%E9%9F%B3%E4%B9%90%E7%9B%92/" title="我的音乐盒">我的音乐盒</a><time datetime="2022-12-30T09:00:00.000Z" title="发表于 2022-12-30 17:00:00">2022-12-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/12/29/B%E7%AB%99up%E4%B8%BB%E6%8E%A8%E8%8D%90/" title="学习资源分享-B站up主推荐">学习资源分享-B站up主推荐</a><time datetime="2022-12-29T13:00:00.000Z" title="发表于 2022-12-29 21:00:00">2022-12-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 亦然亦程</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
